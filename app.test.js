@@ -17,4 +17,9 @@ describe("StringCalculator", () => {
   it("for a single number in string it should return the same number", function () {
     expect(calculator.add("1")).toBe(1);
   });
+
+  //Test 3 - for two numbers it should return the sum
+  it("for two numbers it should return the sum", function () {
+    expect(calculator.add("1,2")).toBe(3);
+  });
 });
