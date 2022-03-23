@@ -1,3 +1,9 @@
 class StringCalculator {
-  add() {}
+  add(value) {
+    if (value === "") {
+      return 0;
+    }
+  }
 }
+
+module.exports = StringCalculator;
