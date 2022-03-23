@@ -14,12 +14,18 @@ describe("StringCalculator", () => {
   });
 
   //Test 2 - for a single number in string it should return the same number
-  it("for a single number in string it should return the same number", function () {
+  it("for a single number in string it should return the same number", () => {
     expect(calculator.add("1")).toBe(1);
   });
 
   //Test 3 - for two numbers it should return the sum
-  it("for two numbers it should return the sum", function () {
+  it("for two numbers it should return the sum", () => {
     expect(calculator.add("1,2")).toBe(3);
+  });
+
+  //Test 4 - should return the sum of an unknown amount of numbers
+  it("should return the sum of unknown amount of numbers", () => {
+    expect(calc.add("133,36,1,3,5")).toEqual(178);
+    expect(calc.add("1,2,90,100")).toEqual(193);
   });
 });
