@@ -12,4 +12,9 @@ describe("StringCalculator", () => {
   it("for an empty string return 0", () => {
     expect(stringCalc.add("")).toBe(0);
   });
+
+  //Test 2 - for a single number in string it should return the same number
+  it("for a single number in string it should return the same number", function () {
+    expect(calculator.add("1")).toBe(1);
+  });
 });
