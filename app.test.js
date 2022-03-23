@@ -36,6 +36,6 @@ describe("StringCalculator", () => {
 
   //Test 6 - does not allow negative numbers
   it("does not like negative numbers", () => {
-    expect(() => stringCalc.add("-41,50")).toThrow("negatives not allowed");
+    expect(() => stringCalc.add("-41,50")).toThrow("negatives not allowed -41");
   });
 });

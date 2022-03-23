@@ -8,7 +8,17 @@ class StringCalculator {
       .split(",") // Split values
       .map((n) => parseInt(n, 10)); // Convert to integers
 
-    if (numbers.some((n) => n < 0)) throw new Error("negatives not allowed");
+    let negativeNumbers = "";
+
+    numbers.forEach((n) => {
+      if (n < 0) {
+        negativeNumbers += " " + n;
+      }
+    });
+
+    if (negativeNumbers) {
+      throw new Error("negatives not allowed" + negativeNumbers);
+    }
 
     return numbers.reduce((s, n) => s + n);
   }
