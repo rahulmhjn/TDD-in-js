@@ -25,7 +25,12 @@ describe("StringCalculator", () => {
 
   //Test 4 - should return the sum of an unknown amount of numbers
   it("should return the sum of unknown amount of numbers", () => {
-    expect(calc.add("133,36,1,3,5")).toEqual(178);
-    expect(calc.add("1,2,90,100")).toEqual(193);
+    expect(calc.add("133,36,1,3,5")).toBe(178);
+    expect(calc.add("1,2,90,100")).toBe(193);
+  });
+
+  //Test 5 - allow \n delimiter between numbers
+  it("allow \n delimiter between numbers", function () {
+    expect(calculator.add("1\n2,3")).toBe(6);
   });
 });
