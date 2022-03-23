@@ -10,17 +10,19 @@ class StringCalculator {
 
     let negativeNumbers = "";
 
-    numbers.forEach((n) => {
-      if (n < 0) {
-        negativeNumbers += " " + n;
+    var sum = numbers.reduce((acc, num) => {
+      if (num < 0) {
+        negativeNumbers += " " + num;
       }
-    });
+
+      return acc + num;
+    }, 0);
 
     if (negativeNumbers) {
       throw new Error("negatives not allowed" + negativeNumbers);
     }
 
-    return numbers.reduce((s, n) => s + n);
+    return sum;
   }
 }
 
