@@ -33,4 +33,9 @@ describe("StringCalculator", () => {
   it("allow \n delimiter between numbers", function () {
     expect(calculator.add("1\n2,3")).toBe(6);
   });
+
+  //Test 6 - does not allow negative numbers
+  it("does not like negative numbers", () => {
+    expect(calc.add("-41,50")).toThrow("negatives not allowed -41");
+  });
 });
